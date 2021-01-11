@@ -16,8 +16,10 @@ api.get('/getmyip', (request, response) => {
     response.send(data);
 });
 
-var server = api.listen(process.env.PORT, function () {
-    var host = server.address().address
-    var port = server.address().port
-    console.log("Example app listening at http://%s:%s", host, port)
-})
+api.listen(process.env.PORT, () => console.log(process.env.PORT));
+
+// var server = api.listen(process.env.PORT, function () {
+//     var host = server.address().address
+//     var port = server.address().port
+//     console.log("Example app listening at http://%s:%s", host, port)
+// })
